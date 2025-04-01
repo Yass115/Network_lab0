@@ -15,7 +15,7 @@ Je vais vous indiquer la méthode à suivre afin de pouvoir attribuer des adress
 
 1- On commence par voir quel service à le plus grand nombre d'hotes (dans notre cas il s'agit dela section "Autres Employés" qui devra compter 300 hotes).
 
-2- En suite nous devonstrouver n dans l'équation suivante 2<sup>n.
+2- En suite nous devons trouver n dans l'équation suivante 2<sup>n = 300, on truve donc n= 8,22 mais nous allons prendre n = 9 afin d'avoir assez d'adresses (donc ici nous aurons 512 adresses.
 
 3- PVST+ (Per VLAN Spanning Tree Plus - Cisco) : Implémentation de Cisco qui permet d’avoir un STP distinct par VLAN.
 
