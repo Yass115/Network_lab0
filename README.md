@@ -14,7 +14,7 @@ Dans le premier exercice lié à ce laboratoire, nous devons attribuer des plage
 Je vais vous indiquer la méthode à suivre afin de pouvoir attribuer des adresses sans problèmes.
 
 1- On commence par voir quel service à le plus grand nombre d'hotes (dans notre cas il s'agit dela section "Autres Employés" qui devra compter 300 hotes).
-2- En suite nous devonstrouver n dans l'équation suivante <var>b<sup>2.
+2- En suite nous devonstrouver n dans l'équation suivante <var>2<sup>n<sup>.
 3- PVST+ (Per VLAN Spanning Tree Plus - Cisco) : Implémentation de Cisco qui permet d’avoir un STP distinct par VLAN.
 
 
