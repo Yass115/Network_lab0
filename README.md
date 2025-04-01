@@ -47,9 +47,21 @@ Voilà le réseau avec les sous réseaux mis en place :
 
 
 ### Exercice 2
+
+Pour ce deuxième exercice, nous devons faire de l'adressage d'un service de 20 hotes, les autres services ont déjà leur plages d'adresses
 ![Exercice 2](exo2.png)
 
+donc nous pouvons déduire ceci
 
+| Nombre d'hotes |Adresses Totales |Adresses utilisables par les hotes |
+| --- |--- |--- |
+| 256 | 121.16.30.0 --> 121.16.30.255 | 121.16.30.1 --> 121.16.30.254 |
+| 64 | 121.16.31.0 --> 121.16.31.63 | 121.16.31.1 --> 121.16.31.62 |
+| 64 | 121.16.31.64 --> 121.16.31.127 | 121.16.31.65 --> 121.16.31.94 |
+| 16 | 121.16.31.128 --> 121.16.31.143 | 121.16.31.129 --> 121.16.31.142 |
+| 20 | 121.16.31.160 --> 121.16.31.191 | 121.16.31.161 --> 121.16.31.190 |
+
+Pourquoi il y a un trou entre les 2 dernières lignes ? (en termes d'adresses IP) puisque nous n'avons pas respecté la règle principale : "Commencer par les unités avec le plus grand nombre d'hotes" et donc pour 20 hotes nous avons un n = 5 donc 32 hotes (c'est le mieux que nous puissions faire) donc l'adresse doit obligatoirement commencer par un multiple de 32 (0,32,96,128,160,192) or la dernière adresse est .143 nous ne pouvons pas utiliser .144 car ce n'est pas un multiple de 32 donc on commence dès le multiple le plus proche (dans ce cas .160)
 
 
 ### Exercice 3
