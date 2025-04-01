@@ -51,7 +51,7 @@ Voilà le réseau avec les sous réseaux mis en place :
 Pour ce deuxième exercice, nous devons faire de l'adressage d'un service de 20 hotes, les autres services ont déjà leur plages d'adresses
 ![Exercice 2](exo2.png)
 
-donc nous pouvons déduire ceci
+donc nous pouvons déduire ceci pour R1 (le routeur 1) (adresse global => 121.16.30.0 /23) :
 
 | Nombre d'hotes |Adresses Totales |Adresses utilisables par les hotes |
 | --- |--- |--- |
@@ -63,6 +63,22 @@ donc nous pouvons déduire ceci
 
 Pourquoi il y a un trou entre les 2 dernières lignes ? (en termes d'adresses IP) puisque nous n'avons pas respecté la règle principale : "Commencer par les unités avec le plus grand nombre d'hotes" et donc pour 20 hotes nous avons un n = 5 donc 32 hotes (c'est le mieux que nous puissions faire) donc l'adresse doit obligatoirement commencer par un multiple de 32 (0,32,96,128,160,192) or la dernière adresse est .143 nous ne pouvons pas utiliser .144 car ce n'est pas un multiple de 32 donc on commence dès le multiple le plus proche (dans ce cas .160)
 
+Pour ce qui est du R2 (routeur 2) (adresse global => 121.16.32.0 /20) nous avons  :
+
+- 150 hotes donc 2<sup>8</sup> = 256 => c'est un /24, nous pouvons donc déduire la plage d'adresses totales qui sera la suivante : 121.16.32.0 -> 121.16.32.255 (/24)
+
+- 100 hotes donc 2<sup>7</sup> = 128 => c'est un /25, nous pouvons donc déduire la plage d'adresses totales qui sera la suivante : 121.16.33.0 -> 121.16.32.127 (/25) (**Car .0 est comptée comme une adresse**)
+
+- 60 hotes donc 2<sup>6</sup> = 64 => c'est un /26, nous pouvons donc déduire la plage d'adresses totales qui sera la suivante : 121.16.33.128 -> 121.16.32.191 (/26) (**on peut remarquer que ce réseau ne doit commencer que par un multiple de 64 et ici c'est bien le cas(ce n'est qu'une coincidence)**)
+
+- 31 hotes donc 2<sup>6</sup> = 64 => c'est un /26, nous pouvons donc déduire la plage d'adresses totales qui sera la suivante : 121.16.33.192 -> 121.16.32.255 (/26)
+
+
+Nousavons auss le sous réseau reliant R1 et R2 (la preière et deuxième adresse IP disponibles pour les hotes ont été donné aux interfaces (c'est généralement le cas) donc on peut en déduire l'adresse globale 89.127.0.4 /30 (32 - 30 = 2 donc 2<sup>2</sup> = 4 donc on a 4 adresses au total)
+
+N'oublions pas aussi d'attribuer la première IP disponible pour les hotes aux interfaces des routeurs reliés à chaque sous-réseaux.
+
+A partir d'ici nous en avons fini avec l'adressage et nous allons donc entamer les exercices concernant les tables de routage ainsi que les simplification de ces dernières (une partie de l'exercice 2 et l'exercice 3)
 
 ### Exercice 3
 ![Exercice 3](exo3.png)
