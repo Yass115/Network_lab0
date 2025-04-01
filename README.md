@@ -35,7 +35,11 @@ Et voilà nous avons fini l'adressag pour un service, il nous reste maintenant �
 | Ressources humaines | 8 | 156.200.34.112 -> 156.200.34.127 | 156.200.34.113 -> 156.200.34.126 |
 | Comptabilité | 5 | 156.200.34.128 -> 156.200.34.135 | 156.200.34.129 -> 156.200.34.134 |
 
-**Attention l'adresse 156.200.34.0 est comptée comme la 1ere adresse donc pour 64 adresses on fait 0+64-1**
+**Attention l'adresse 156.200.34.0 est comptée comme la 1ere adresse donc pour 64 adresses on fait 0+64-1 = 63**
+
+la toute première adresse de la plage des adresses totales est réservé au sous réseau et la dernière adresse est reservé au broadcast
+
+Petit apparté important, voici comment faire pour avoir un masque sous réseau sous la forme /x à partir de la forme x.x.x.x exemple: si on a un masque de 255.255.255.192 alors on fait 256 - 192 = 64 et après il faut résoudre cette équation 2<sup>n </sup> = 64 on trouve donc n = 6 et donc on fait 32 - 6 = 26 donc le masque de sous réseau peut s'écrire comme celà /26
 
 
 ### Exercice 2
