@@ -6,3 +6,9 @@ Dans ce premier laboratoire nous allons aborder l'adressage ainsi que la mise en
 ## Adressage
 L’adressage réseau est un élément fondamental des communications informatiques. Il permet aux appareils d’échanger des données au sein d’un réseau local (LAN) ou à travers Internet. Ce laboratoire vise à comprendre les bases de l’adressage IP, les masques de sous-réseau et l’organisation des réseaux pour assurer une communication efficace et structurée.
 
+![Exercice 1](exo1.png)
+
+
+![Exercice 2](exo2.png)
+
+![Exercice 3](exo3.png)
