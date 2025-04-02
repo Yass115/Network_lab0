@@ -80,5 +80,19 @@ N'oublions pas aussi d'attribuer la première IP disponible pour les hotes aux i
 
 A partir d'ici nous en avons fini avec l'adressage et nous allons donc entamer les exercices concernant les tables de routage ainsi que les simplification de ces dernières (une partie de l'exercice 2 et l'exercice 3)
 
+Pour effectuer la table de routage nous devons tout simplement voir quel chemin doit prendre le routeur pour atteindre un sous-réseau. Faisons un exemple avec le routeur R1, si nous voulons atteindre le sous-réseau 121.16.30.0/24 on remarque qu'il est directement connecté au Routeur 1, pour indiquer celà sur la table de routage soit nous indiquons la meme adresse dans la colonne Interface et dans la colonne Next-Hop ou bien on peut écrire "c" pour dire "fully connected" sinon le Next-hop design la prochaine interface à laquelle il faut y aller pour atteindre un certain sous-réseau alors que la colonne "interface" c'est l'interface de sortie. (**Attention la table de routage ici n'est pas simplifiée**
+
+Voici à quoi ressemble la table de routage du routeur 1 :
+
+| n° |Network (destination) |Mask |Next-Hop |Interface |
+|--- | --- |--- |--- |--- |
+| 1| 121.16.30.0 | /24 | 121.16.30.1 |121.16.30.1 |
+| 2| 121.16.31.64 | /26 | 121.16.31.65 |121.16.31.65 |
+| 3| 121.16.31.0 | /26 | 121.16.31.1 |121.16.31.1 |
+| 4| 121.16.31.128 | /28 | 121.16.31.129 |121.16.31.129 |
+| 5| 121.16.31.160 | /27 | 121.16.31.161 |121.16.31.161 |
+| -----| ----- | ----- | -----|----- |
+
+
 ### Exercice 3
 ![Exercice 3](exo3.png)
