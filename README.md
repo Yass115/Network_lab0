@@ -128,6 +128,10 @@ Nous avons donc simplifier la table de routage de R1, faisons donc de meme pour 
 | 10| 121.16.33.192 | /26 | 121.16.33.193 |121.16.33.193 |
 | 11| 89.127.0.4 | /30 | 89.127.0.6 |89.127.0.6 |
 
+Et voici la table de routage simplifié : (à faire)
+
 
 ### Exercice 3
+
+Pour Simplifier cette table 
 ![Exercice 3](exo3.png)
