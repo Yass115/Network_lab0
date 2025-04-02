@@ -109,7 +109,7 @@ Dans la première partie de cette table de routage nous avons tous les réseaux 
 | 5| 121.16.31.160 | /27 | 121.16.31.161 |121.16.31.161 |
 | -----| ----- | ----- | -----|----- |
 | 6| 121.16.32.0 | /20 | 89.127.0.6 |89.127.0.5 |
-| 10| 89.127.0.4 | /30 | 89.127.0.5 |89.127.0.5 |
+| 7| 89.127.0.4 | /30 | 89.127.0.5 |89.127.0.5 |
 
 Nous avons donc simplifier la table de routage de R1, faisons donc de meme pour R2 maintenant.
 
