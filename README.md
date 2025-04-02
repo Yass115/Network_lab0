@@ -92,6 +92,28 @@ Voici à quoi ressemble la table de routage du routeur 1 :
 | 4| 121.16.31.128 | /28 | 121.16.31.129 |121.16.31.129 |
 | 5| 121.16.31.160 | /27 | 121.16.31.161 |121.16.31.161 |
 | -----| ----- | ----- | -----|----- |
+| 6| 121.16.32.0 | /24 | 89.127.0.6 |89.127.0.5 |
+| 7| 121.16.33.0 | /25 | 89.127.0.6 |89.127.0.5 |
+| 8| 121.16.33.128 | /26 | 89.127.0.6 |89.127.0.5 |
+| 9| 121.16.33.192 | /26 | 89.127.0.6 |89.127.0.5 |
+| 10| 89.127.0.4 | /30 | 89.127.0.5 |89.127.0.5 |
+
+Dans la première partie de cette table de routage nous avons tous les réseaux qui sont directement connectés au routeur, pour la deuxième partie du tableau il s'agit des sous réseaux uniquement accessibles via R2, nous pouvons simplifier cette table, il faut que le next-hop et la colonne interface soient les memes et s'il n'y a pas de trous entre les adresses, pour ce tableau là ça donne le tableau suivant :
+
+| n° |Network (destination) |Mask |Next-Hop |Interface |
+|--- | --- |--- |--- |--- |
+| 1| 121.16.30.0 | /24 | 121.16.30.1 |121.16.30.1 |
+| 2| 121.16.31.64 | /26 | 121.16.31.65 |121.16.31.65 |
+| 3| 121.16.31.0 | /26 | 121.16.31.1 |121.16.31.1 |
+| 4| 121.16.31.128 | /28 | 121.16.31.129 |121.16.31.129 |
+| 5| 121.16.31.160 | /27 | 121.16.31.161 |121.16.31.161 |
+| -----| ----- | ----- | -----|----- |
+| 6| 121.16.32.0 | /20 | 89.127.0.6 |89.127.0.5 |
+| 10| 89.127.0.4 | /30 | 89.127.0.5 |89.127.0.5 |
+
+Nous avons donc simplifier la table de routage de R1, faisons donc de meme pour R2 maintenant.
+
+
 
 
 ### Exercice 3
