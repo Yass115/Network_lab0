@@ -147,6 +147,7 @@ nous devons simplifier cette table
 ![Exercice 3](exo3.png)
 
 
+Voici ce que donne la table simplifié (on regarde bie si le next-hop et l'interface sont bien les memes et aussi s'il n'y a pas de discontinuitée au niveau des adresses attribués)
 | n° |Network (destination) |Mask |Next-Hop |Interface |
 |--- | --- |--- |--- |--- |
 | 1| 193.190.147.64| /26 | 193.190.147.69 |193.172.30.0.1 |
