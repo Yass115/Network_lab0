@@ -128,7 +128,7 @@ Nous avons donc simplifier la table de routage de R1, faisons donc de meme pour 
 | 10| 121.16.33.192 | /26 | 121.16.33.193 |121.16.33.193 |
 | 11| 89.127.0.4 | /30 | 89.127.0.6 |89.127.0.6 |
 
-Et voici la table de routage simplifié : (à faire)
+Et voici la table de routage simplifié :
 
 | n° |Network (destination) |Mask |Next-Hop |Interface |
 |--- | --- |--- |--- |--- |
@@ -143,7 +143,17 @@ Et voici la table de routage simplifié : (à faire)
 
 ### Exercice 3
 
-Pour Simplifier cette table 
+nous devons simplifier cette table 
 ![Exercice 3](exo3.png)
 
 
+| n° |Network (destination) |Mask |Next-Hop |Interface |
+|--- | --- |--- |--- |--- |
+| 1| 193.190.147.64| /26 | 193.190.147.69 |193.172.30.0.1 |
+| 2| 172.30.0.0 | /29 | 172.30.0.1 |172.30.0.1 |
+| 3| 172.30.1.0 | /25 | 172.30.0.2 |172.30.0.1 |
+| 4| 172.30.2.0 | /23 | 172.30.0.2 |172.30.0.1 |
+| 5| 172.30.7.0 | /25 | 172.30.0.4 |172.30.0.1 |
+| 6| 172.30.8.0 | /24 | 172.30.0.4 |172.30.0.1 |
+| 7| 172.30.4.0 | /24 | 172.30.0.3 |172.30.0.1 |
+| 8| 172.30.6.0 | /24 | 172.30.0.3 |172.30.0.1 |
