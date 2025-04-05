@@ -130,8 +130,20 @@ Nous avons donc simplifier la table de routage de R1, faisons donc de meme pour 
 
 Et voici la table de routage simplifié : (à faire)
 
+| n° |Network (destination) |Mask |Next-Hop |Interface |
+|--- | --- |--- |--- |--- |
+| 1| 0.0.0.0 | /0 | 89.127.0.5 |89.127.0.6 |
+| 2| 121.16.30.0 | /23 | 89.127.0.6 |89.127.0.5 |
+| -----| ----- | ----- | -----|----- |
+| 3| 121.16.32.0 | /24 | 121.16.32.1 |121.16.32.1 |
+| 4| 121.16.33.0 | /25 | 121.16.33.1 |121.16.33.1 |
+| 5| 121.16.33.128 | /26 | 121.16.33.129 |121.16.33.129 |
+| 6| 121.16.33.192 | /26 | 121.16.33.193 |121.16.33.193 |
+| 7| 89.127.0.4 | /30 | 89.127.0.6 |89.127.0.6 |
 
 ### Exercice 3
 
 Pour Simplifier cette table 
 ![Exercice 3](exo3.png)
+
+
