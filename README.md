@@ -158,3 +158,19 @@ Voici ce que donne la table simplifié (on regarde bie si le next-hop et l'inter
 | 6| 172.30.8.0 | /24 | 172.30.0.4 |172.30.0.1 |
 | 7| 172.30.4.0 | /24 | 172.30.0.3 |172.30.0.1 |
 | 8| 172.30.6.0 | /24 | 172.30.0.3 |172.30.0.1 |
+
+## Méthodes d'écriture du masque
+
+Si j'ai le masque 255.255.240.0 et que je veux obtenir l'écriture CIDR alors voici les étapes à suivre
+1 - (256-240) = 16
+2 - log2(16) = 4
+3 - (8 - 4) = 4
+4 - 2*8 + 4 = 20 (ici on a fait fois 2 car nous avons 2 octets pleins)
+5 - /20
+
+
+Si je veux passer de /20 à l'autre écriture alors :
+1 - 20//8 = 2,5 = 2 (j'arrondis, ici 2 indque le nombre d'octets pleins)
+2 - 20 % 8 = 4 (il s'agit ici du reste de la division 2*8 = 16 + 4(le reste pour atteindre 20)
+3 - (256 - 2<sup>8-4</sup>) = 240
+4 - 255.255.240.0
